@@ -17,8 +17,27 @@ function getRandomCharacter(charSet) {
   return charSet.charAt(randomIndex);
 }
 
+// Validate password between 8-128 characters
 function generatePassword() {
   var passwordLength = prompt("Enter password length (between 8 and 128 characters):");
+  
+  if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
+    alert("Please enter a valid password length between 8 and 128 characters.");
+    return "";
+  }
+}
+
+// Variables for the of characters
+var includeLowercase = confirm("Include lowercase characters?");
+var includeUppercase = confirm("Include uppercase characters?");
+var includeNumeric = confirm("Include numeric characters?");
+var includeSpecial = confirm("Include special characters?");
+
+ // Making sure that at least 1 of the charcter types are selected
+ if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
+  alert("Please select at least one character type.");
+  return "";
+}
 
 // Write password to the #password input
 function writePassword() {
