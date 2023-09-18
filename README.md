@@ -29,7 +29,7 @@ In today's digital age, having strong and secure passwords is crucial for protec
 
 ## Deployed Application
 
-Access the deployed Password Generator application by clicking [here](#). 
+Access the deployed Password Generator application by clicking [here](https://willxluong.github.io/PasswordGenerator/). 
 
 ## License
 
